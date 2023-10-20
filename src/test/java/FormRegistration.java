@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-
+@Tag("demoqa")
 public class FormRegistration {
     @BeforeAll
     static void beforeall()
