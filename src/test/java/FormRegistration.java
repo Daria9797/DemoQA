@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Tag;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 
 @Tag("demoqa")
 public class FormRegistration {
