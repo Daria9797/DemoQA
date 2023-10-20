@@ -31,9 +31,8 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-selenide:2.17.3'
 }
 
-
-tasks.register('jenkins_task', Test) {
+task jenkins_task(type: Test) {
     useJUnitPlatform {
-
+        includeTags("demoqa")
     }
 }
