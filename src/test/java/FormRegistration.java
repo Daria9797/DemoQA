@@ -21,13 +21,16 @@ public class FormRegistration {
         Configuration.browserSize = "1920x1080";
         //Configuration.holdBrowserOpen=true;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
     }
+    @BeforeEach
+  void addListener() {
+    SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+  }
 
     @AfterEach
     void addAttachments() {
