@@ -31,6 +31,9 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-selenide:2.17.3'
 }
 
-test {
-    useJUnitPlatform()
+
+tasks.register('jenkins_task', Test) {
+    useJUnitPlatform {
+
+    }
 }
